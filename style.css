@@ -195,3 +195,7 @@ p { margin: 0 0 1em; }
 .design-head { display: grid; gap: 24px; align-items: center; }
 .design-art img { border-radius: 12px; border: 1px solid var(--line); max-width: 360px; width: 100%; }
 @media (min-width: 900px) { .design-head { grid-template-columns: 360px 1fr; gap: 48px; } }
+.also-on { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0 16px; }
+.also-on span { font-size: .9rem; color: var(--muted); margin-right: 4px; }
+.also-on a { font-size: .9rem; padding: 0 14px; min-height: 40px; display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: var(--ink); }
+.also-on a[aria-current="page"] { background: var(--ink); color: #fff; border-color: var(--ink); }
