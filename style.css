@@ -105,6 +105,9 @@ p { margin: 0 0 1em; }
 @media (min-width: 900px) {
   .product-grid { grid-template-columns: 1.25fr 1fr; gap: 64px; align-items: start; }
   .buybox { position: sticky; top: 96px; }
+  /* main photo full width, the rest two across, so the gallery is about as tall as the details column */
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .gallery li:first-child { grid-column: 1 / -1; }
 }
 
 /* text pages */
