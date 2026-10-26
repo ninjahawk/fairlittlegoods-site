@@ -63,6 +63,7 @@ p { margin: 0 0 1em; }
 /* sections */
 .section { padding-top: 48px; padding-bottom: 48px; }
 .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.season-blurb { margin: -6px 0 22px; max-width: 36em; }
 .band { background: var(--soft); }
 .steps { list-style: none; padding: 0; margin: 8px 0 24px; display: grid; gap: 24px; counter-reset: s; }
 .steps li { counter-increment: s; }
