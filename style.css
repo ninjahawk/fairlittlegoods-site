@@ -132,6 +132,11 @@ p { margin: 0 0 1em; }
 .topbar .sep { display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.6); vertical-align: middle; margin: 0 12px; }
 .topbar .show-sm { display: none; }
 @media (max-width: 599px) { .topbar .hide-sm { display: none; } .topbar .show-sm { display: inline; } }
+/* delivery estimate + holiday order-by (item 4b, internal/DELIVERY.md); filled by the page script, hidden without it */
+.topbar [hidden] { display: none !important; }
+.eta-cut { margin: -6px 0 14px; font-size: .92rem; font-weight: 600; color: var(--accent); }
+@media (max-width: 599px) { .topbar.has-xmas .show-sm, .topbar.has-xmas .xmas-sep + strong + .sep { display: none; } }
+.ship-mini .nw { white-space: nowrap; }
 .split { display: grid; gap: 28px; align-items: center; }
 .split-img img { border-radius: 12px; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 .split p { color: var(--muted); max-width: 32em; }
@@ -228,8 +233,12 @@ p { margin: 0 0 1em; }
 .browse-head { margin-top: 28px; }
 .footer-brand p.muted { max-width: 34ch; margin: 0 0 12px; }
 .promises { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; font-size: .88rem; }
+.promises-when { margin: 0 0 4px; }
 .promises li::before { content: "\2713"; color: var(--accent); font-weight: 700; margin-right: 8px; }
 .footer-base { border-top: 1px solid var(--line); padding-top: 18px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
 .footer-base p { margin: 0; }
 .pay { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+@media (max-width: 599px) { .pay { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; } }  /* 3 + 3 badges, no lone badge on a row (4d judge) */
 .pay li { font-size: .72rem; font-weight: 600; letter-spacing: .02em; border: 1px solid var(--line); border-radius: 4px; padding: 3px 7px; color: var(--ink); background: #fff; }
+/* gift guide chips: one row that scrolls sideways on phones, so the products start on the first screen */
+@media (max-width: 699px) { .gift-chips { flex-wrap: nowrap; overflow-x: auto; margin-right: -20px; padding-right: 20px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 82%, transparent); mask-image: linear-gradient(to right, #000 82%, transparent); } .gift-chips a { flex: none; } }

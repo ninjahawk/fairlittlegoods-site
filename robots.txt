@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /p/
 Allow: /
 
 Sitemap: https://fairlittlegoods.com/sitemap.xml
