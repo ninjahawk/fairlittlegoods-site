@@ -242,3 +242,23 @@ p { margin: 0 0 1em; }
 .pay li { font-size: .72rem; font-weight: 600; letter-spacing: .02em; border: 1px solid var(--line); border-radius: 4px; padding: 3px 7px; color: var(--ink); background: #fff; }
 /* gift guide chips: one row that scrolls sideways on phones, so the products start on the first screen */
 @media (max-width: 699px) { .gift-chips { flex-wrap: nowrap; overflow-x: auto; margin-right: -20px; padding-right: 20px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 82%, transparent); mask-image: linear-gradient(to right, #000 82%, transparent); } .gift-chips a { flex: none; } }
+/* item 4f (2026-11-21): the Buy button in the first phone screen. Description and "Also on" sit below the button
+   (as best-seller product pages do); on phones the swatch names show only in the legend, crumbs hide, title is smaller. */
+.buybox .desc { margin-top: 4px; }
+@media (max-width: 599px) {
+  .product .crumbs { display: none; }
+  .product-grid { gap: 12px; }
+  .ship-mini { margin-bottom: 8px; }
+  .buybox h1 { font-size: 1.45rem; }
+  .gallery { grid-auto-columns: 84%; }
+  .opt { margin-bottom: 10px; }
+  .opt legend { margin-bottom: 6px; }
+  .options select { margin: 6px 0 10px; }
+  .swatch .sw-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+.size-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; column-gap: 12px; }
+.size-head .opt { margin-bottom: 0; }
+.size-head .chart { margin: 0; }
+.size-head .chart summary { font-size: .9rem; }
+.size-head .chart[open] { flex-basis: 100%; order: 2; }
+.size-head .chart[open] summary { text-align: right; }
